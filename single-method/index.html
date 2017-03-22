@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <h1> {{ msg }}</h1>
+  <button v-on:click="changeTitle"> Change title </button>
+</div>
+
+<script type="text/javascript">
+
+let app = new Vue({
+  el: "#app",
+  data: {
+    msg: 'Hello world'
+  },
+  methods: {
+    changeTitle() {
+      this.msg = 'Hello ';
+    }
+  }
+});
+
+</script>

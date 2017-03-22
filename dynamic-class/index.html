@@ -1,0 +1,26 @@
+<style media="screen">
+  .red {
+    background: red;
+  }
+  .blue {
+    background: blue;
+  }
+</style>
+
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <input type="text" v-on:input="cssClass = $event.target.value">
+  <p v-bind:class="cssClass"> Class: {{ cssClass }} </p>
+</div>
+
+<script type="text/javascript">
+
+let app = new Vue({
+  el: "#app",
+  data: {
+    cssClass: ''
+  }
+});
+
+</script>

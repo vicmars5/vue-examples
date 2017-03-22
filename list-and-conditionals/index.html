@@ -1,0 +1,28 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <button type="button" v-on:click="show = !show"> Hide/show</button>
+  <div v-if="show"> Hello i am here </div>
+  <div v-else> I am hidden </div>
+  <ul>
+    <li v-for="(person, index) in persons">
+      {{ person.name }} - {{ person.age}} - [ {{ index }} ]
+    </li>
+  </ul>
+</div>
+
+<script type="text/javascript">
+
+let app = new Vue({
+  el: "#app",
+  data: {
+    show: true,
+    persons: [
+      { name: 'Luis', age: 23 },
+      { name: 'Victor', age: 20 },
+      { name: 'Carlos', age: 21 }
+    ]
+  }
+});
+
+</script>
