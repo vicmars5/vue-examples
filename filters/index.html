@@ -1,0 +1,24 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <h1> {{ title | upperCase }}</h1>
+  <p> {{ message | lowerCase }}</p>
+</div>
+
+<script>
+  Vue.filter('lowerCase', val => val.toLowerCase());
+  let app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        title: 'Hello world',
+        message: 'A message'
+      };
+    },
+    filters: {
+      upperCase(val) {
+        return val.toUpperCase();
+      }
+    }
+  });
+</script>
